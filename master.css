@@ -1,0 +1,112 @@
+nav{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+nav ul li a{
+    position: relative;
+}
+nav ul li a::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background-color: #eee;
+    width: 0;
+    height: 2px;
+    transition: 0.5s;
+}
+nav ul li a:hover::before{
+    width: 80%;
+}
+.bg-image{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.landing{
+    background-image: url("image/hero-bg.jpg");
+}
+.landing .text h1{
+    font-size: 4.5rem;
+}
+.about .pra{
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+.services .box p {
+    color: rgb(63, 63, 63);
+}
+.services .box i{
+    font-size: 1.5rem;
+    border: 10px solid;
+    transition: 0.5s;
+    border: 10px solid var(--bs-blue);
+}
+.services .box:hover i{
+    background-color: var(--bs-blue);
+    border: 10px solid rgb(138 185 255);
+    color: #fff;
+}
+@media (max-width:767px) {
+    .services .row, .portfolio .row{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+.count{
+    background-image: url("image/counters-bg.jpg");
+}
+.portfolio .box .image{
+    height: 199.98px;
+    display: block;
+    overflow: hidden;
+}
+.portfolio .box .image img{
+    transition: 1s;
+}
+.portfolio .box:hover .image img{
+    transform: scale(1.4);
+}
+.portfolio .box i{
+    cursor: pointer;
+}
+.heading{
+    position: relative;
+    padding-bottom: 5px;
+}
+.heading::before{
+    position: absolute;
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    background-color: var(--bs-blue);
+    width: 50px;
+    height: 5px;
+}
+.heading h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swipe{
+      background-image: url("image/overlay-bg.jpg");
+  }
