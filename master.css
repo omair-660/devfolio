@@ -1,6 +1,9 @@
 nav{
     background-color: rgba(0, 0, 0, 0.9);
 }
+nav .container {
+    --bs-gutter-x: 0;
+}
 nav ul li a{
     position: relative;
 }
@@ -29,28 +32,61 @@ nav ul li a:hover::before{
 .landing .text h1{
     font-size: 4.5rem;
 }
-.about .pra{
+.pra{
     font-size: 1.25rem;
     font-weight: 300;
 }
 .services .box p {
     color: rgb(63, 63, 63);
 }
-.services .box i{
+.services .box i, .socail i{
     font-size: 1.5rem;
     border: 10px solid;
     transition: 0.5s;
     border: 10px solid var(--bs-blue);
 }
-.services .box:hover i{
+.services .box:hover i ,.socail i:hover{
     background-color: var(--bs-blue);
     border: 10px solid rgb(138 185 255);
     color: #fff;
 }
+.socail i{
+    border: 3px solid var(--bs-blue);
+    width: 56px;
+    height: 56px; 
+    cursor: pointer;
+}
+.socail i:hover{
+    border: 3px solid rgb(138 185 255);
+}
 @media (max-width:767px) {
-    .services .row, .portfolio .row{
+    .services .row, .portfolio .row,.blog .row,.about .container{
         width: 90%;
         margin: 0 auto;
+    }
+    .about img{
+        margin-bottom: 2rem
+    }
+    nav .container {
+        --bs-gutter-x: 1.5rem;
+    }
+    .about .container{
+        width: 90%;
+        margin: 0 auto;
+        padding: 1.5rem!important;
+    }
+    .blog h6, .icon {
+        font-size: 16px;
+    }
+    .footer .row {
+        margin: 0 auto;
+        padding: 1rem!important;
+    }
+    .footer h1{
+        margin-top: 3rem;
+    }
+    .socail i {
+        margin-left: 5px;
     }
 }
 .count{
@@ -110,3 +146,65 @@ swiper-container {
   .swipe{
       background-image: url("image/overlay-bg.jpg");
   }
+.blog h3 , .blog h6 ,.blog img{
+    cursor: pointer;
+    transition: 0.5s;
+}
+.blog img{
+    height: 231px;
+}
+.blog h3:hover , .blog h6:hover{
+    color: var(--bs-blue);
+}
+.blog .caption img{
+    width: 32px;
+    height: 32px;
+}
+.footer{
+    background-image: url("image/overlay-bg.jpg");
+}
+::placeholder{
+    font-size: 15px;
+}
+ul{
+    list-style: none;
+}
+.bef::before{
+    position: absolute;
+    content: "";
+    bottom: -5px;
+    left: 0;
+    background-color: var(--bs-blue);
+    width: 24%;
+    height: 4px;
+}
+.spilt {
+    position: relative;
+}
+.landing h3 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-right: 3px solid #fff;
+    width: 158px;
+    overflow: hidden;
+    animation: split 3s steps(9) infinite ,op 0.5s infinite;
+}
+
+@keyframes split {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 177px;
+    }
+}
+@keyframes op {
+    0% {
+        border-right-color: #fff;
+    }
+    100% {
+        border-right-color: transparent;
+
+    }
+}
