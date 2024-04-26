@@ -1,3 +1,6 @@
+*{
+    scroll-padding-top:70px;
+}
 nav{
     background-color: rgba(0, 0, 0, 0.9);
 }
@@ -92,11 +95,7 @@ nav ul li a:hover::before{
 .count{
     background-image: url("image/counters-bg.jpg");
 }
-.portfolio .box .image{
-    height: 199.98px;
-    display: block;
-    overflow: hidden;
-}
+
 .portfolio .box .image img{
     transition: 1s;
 }
@@ -178,33 +177,72 @@ ul{
     width: 24%;
     height: 4px;
 }
-.spilt {
-    position: relative;
+.navbar-toggler:focus {
+border: 3px solid #eee;
+transition: 0.2s;
 }
-.landing h3 {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    border-right: 3px solid #fff;
-    width: 158px;
-    overflow: hidden;
-    animation: split 3s steps(9) infinite ,op 0.5s infinite;
-}
-
-@keyframes split {
-    0% {
-        width: 0;
+@media (max-width:767px) {
+    .socail i {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
     }
-    100% {
-        width: 177px;
+    nav ul li a::before {
+        left: 0;
+    }
+    nav ul li a::before:hover {
+        width: 50%;
     }
 }
-@keyframes op {
-    0% {
-        border-right-color: #fff;
+.navbar-nav .nav-link .active .navbar-nav{
+    color: rgba(255, 0, 0, 0.9);
+}
+.d-2{
+    width: 0;
+    height: 0;
+   opacity: 0;
+   visibility: hidden;
+   transition: 1s;
+   overflow: hidden;
+}
+.d-1:hover .d-2{
+    visibility: visible;
+    width: 100%;
+    height: auto;
+   opacity: 1;
+}
+@media (max-width:767px) {
+    .d-1:hover .d-2{
+       right: 0px!important;
     }
-    100% {
-        border-right-color: transparent;
-
-    }
+}
+.cap {
+    transform: translate(-50%,50%);
+}
+.cap p{
+    font-size: 14px;
+}
+.typ {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.typ {
+    font-size: 2.5rem;
+}
+#scrollToTop {
+    padding: 6px;
+    width: 35px;
+    height: 35px;
+    right: 15px;
+    transition: 0.5s;
+    opacity: 0;
+    transition:all 0.3s ease;
+    background: #0d6efd;
+    z-index: 99;
+}
+#scrollToTop.visible {
+    opacity: 1;
+}
+#scrollToTop:hover{
+    background: #298eff;
 }
