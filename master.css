@@ -246,3 +246,7 @@ transition: 0.2s;
 #scrollToTop:hover{
     background: #298eff;
 }
+.count i{
+    width: 85.77px;
+    height: 85.77px;
+}
