@@ -254,3 +254,6 @@ transition: 0.2s;
     width: 85.77px;
     height: 85.77px;
 }
+.swipe img{
+    width: 150px;
+}
