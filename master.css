@@ -10,16 +10,20 @@ nav .container {
 nav ul li a{
     position: relative;
 }
+.navbar .active:before {
+    visibility: visible;
+    width: 80%;
+}
 nav ul li a::before {
-    position: absolute;
     content: "";
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    background-color: #eee;
-    width: 0;
+    position: absolute;
     height: 2px;
-    transition: 0.5s;
+    bottom: -6px;
+    left: 4px;
+    width: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out 0s;
 }
 nav ul li a:hover::before{
     width: 80%;
